@@ -1,0 +1,288 @@
+[
+  {
+    "type": "insertion",
+    "img": "https://velog.velcdn.com/images/sians0209/post/69df3647-be1d-4423-86e5-55df6401e9f0/image.gif"
+  },
+  {
+    "type": "insertion",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif"
+  },
+  {
+    "type": "insertion",
+    "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--T4wKuT2f--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/dp61xcspsu0wuoqopwub.gif"
+  },
+  {
+    "type": "insertion",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/24/Sorting_insertion_sort_anim.gif"
+  },
+  {
+    "type": "insertion",
+    "img": "https://d2.naver.com/content/images/2020/01/img-3-.gif"
+  },
+  {
+    "type": "insertion",
+    "img": "https://user-images.githubusercontent.com/78089013/176433668-28088cc9-5d98-4ba5-971f-0cb9b02348a5.gif"
+  },
+  {
+    "type": "insertion",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif"
+  },
+  {
+    "type": "selection",
+    "img": "https://velog.velcdn.com/images/sians0209/post/5bd84189-2f86-4869-a0c9-1b1719c596de/image.gif"
+  },
+  {
+    "type": "merge",
+    "img": "https://thumbs.gfycat.com/ClutteredWaryAntlion.webp"
+  },
+  {
+    "type": "bubble",
+    "img": "https://velog.velcdn.com/images/sians0209/post/862bdbfc-85d5-4d52-9133-82665eda4f69/image.gif"
+  },
+  {
+    "type": "tim",
+    "img": "https://d2.naver.com/content/images/2020/01/img-9-.gif"
+  },
+  {
+    "type": "tim",
+    "img": "https://thumbs.gfycat.com/BruisedFrigidBlackrhino-size_restricted.gif"
+  },
+  {
+    "type": "tim",
+    "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--xted_fT3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/lvsvw4gn3eytl7jvka2g.gif"
+  },
+  {
+    "type": "merge",
+    "img": "https://d2.naver.com/content/images/2020/01/img-5-.gif"
+  },
+  {
+    "type": "merge",
+    "img": "https://d2.naver.com/content/images/2020/01/img-1-.gif"
+  },
+  {
+    "type": "selection",
+    "img": "https://user-images.githubusercontent.com/78089013/176308368-bdf31895-fae2-49ef-b9ad-8845a7fcba7a.gif"
+  },
+  {
+    "type": "selection",
+    "img": "https://everythingcomputerscience.com/images/Selection_sort_animation.gif"
+  },
+  {
+    "type": "heap",
+    "img": "https://user-images.githubusercontent.com/78089013/176308418-ca1bdf07-9266-429f-a240-2b5484de6f51.gif"
+  },
+  {
+    "type": "heap",
+    "img": "https://everythingcomputerscience.com/images/Heapsort-example.gif"
+  },
+  {
+    "type": "heap",
+    "img": "https://d2.naver.com/content/images/2020/01/img.gif"
+  },
+  {
+    "type": "heap",
+    "img": "https://user-images.githubusercontent.com/78089013/176433372-e74c2fce-f4b1-4b6e-98b1-ea3fe5c80b48.gif"
+  },
+  {
+    "type": "radix",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Radix_Sort_5.gif"
+  },
+  {
+    "type": "bubble",
+    "img": "https://user-images.githubusercontent.com/78089013/176308250-e75134b8-177a-40bc-b984-5cfa13c09baa.gif"
+  },
+  {
+    "type": "tim",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Timsort.gif"
+  },
+  {
+    "type": "tim",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Timsort_Reversed.gif"
+  },
+  {
+    "type": "bubble",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/BiDirectional_Bubble_Sort.gif"
+  },
+  {
+    "type":"odd-even",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/1/1b/Odd_even_sort_animation.gif"
+  },
+  {
+    "type": "odd-even",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Odd-Even_Sort_3.gif"
+  },
+  {
+    "type": "radix",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Radix_Sort_2.gif"
+  },
+  {
+    "type": "bubble",
+    "img": "https://user-images.githubusercontent.com/78089013/176433216-9b3b09c6-12ce-4713-bee9-ecbab979efbd.gif"
+  },
+  {
+    "type": "bubble",
+    "img": "https://user-images.githubusercontent.com/78089013/176554030-355ece1a-9560-4928-bbf2-40445f1fe33e.gif"
+  },
+  {
+    "type": "selection",
+    "img": "https://user-images.githubusercontent.com/78089013/176435219-96aa4818-4ae5-411e-916c-69a3285e6f14.gif"
+  },
+  {
+    "type": "selection",
+    "img": "https://user-images.githubusercontent.com/78089013/176554628-3c754a53-aca4-46ff-a015-0b8a6dac2999.gif"
+  },
+  {
+    "type": "shell",
+    "img": "https://user-images.githubusercontent.com/78089013/176308477-b31cd21f-e7b7-43ca-b663-ecd991f1f5dd.gif"
+  },
+  {
+    "type": "shell",
+    "img": "https://user-images.githubusercontent.com/78089013/176433418-ab39374e-0783-453d-8a9c-d4a4441e2440.gif"
+  },
+  {
+    "type": "merge",
+    "img": "https://user-images.githubusercontent.com/78089013/176433465-66af0062-7425-4a60-8a4d-b49095d6c0cb.gif"
+  },
+  {
+    "type": "merge",
+    "img": "https://user-images.githubusercontent.com/78089013/176554327-0ed04372-5aa5-4236-b8bb-47d5d31d54a1.gif"
+  },
+  {
+    "type": "quick",
+    "img": "https://user-images.githubusercontent.com/78089013/176308577-3c13996b-7443-4b67-838c-7de3dc36311f.gif"
+  },
+  {
+    "type": "quick",
+    "img": "https://everythingcomputerscience.com/images/Sorting_quicksort_anim.gif"
+  },
+  {
+    "type": "quick",
+    "img": "https://user-images.githubusercontent.com/78089013/176554458-2d7b97ad-8c00-4ab6-b988-4d74fa466994.gif"
+  },
+  {
+    "type": "quick",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Quicksort_Few_Unique.gif"
+  },
+  {
+    "type": "quick",
+    "img": "https://d2.naver.com/content/images/2020/01/img-2-.gif"
+  },
+  {
+    "type": "quick",
+    "img": "https://user-images.githubusercontent.com/78089013/176433517-cc0cc985-c60d-42e9-a5b0-ecbe8c2621bf.gif"
+  },{
+    "type": "quick",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Quicksort-diagram.svg/400px-Quicksort-diagram.svg.png"
+  },
+  {
+    "type" : "comb",
+    "img" : "https://static.javatpoint.com/ds/images/comb-sort-algorithm10.png"
+  },
+  {
+    "type" : "comb",
+    "img" : "https://media.geeksforgeeks.org/wp-content/cdn-uploads/scene02809.jpg"
+  },
+  {
+    "type" : "comb",
+    "img" : "https://upload.wikimedia.org/wikipedia/commons/4/46/Comb_sort_demo.gif"
+  },
+  {
+    "type":"cocktail",
+    "img":"https://www.baeldung.com/wp-content/uploads/sites/4/2022/09/cocktail2-1024x728.png"
+  },{
+    "type":"cocktail",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif"
+  },
+  {
+    "type":"cocktail",
+    "img" :"https://quuxplusone.github.io/blog/images/2020-12-13-shakersort.png"
+  },
+  {
+    "type":"cocktail",
+    "img":"https://www.growingwiththeweb.com/images/2016/04/02/cocktail-sort.svg"
+  },
+  {
+    "type":"smooth",
+    "img":"https://www.keithschwarz.com/smoothsort/images/binary-heap.png"
+  },
+  {
+    "type":"smooth",
+    "img":"https://blog.kakaocdn.net/dn/bgm82f/btqGdEQE62g/8uP92lk8nZe8FeeMUARk6K/img.gif"
+  },
+  {
+    "type": "smooth",
+    "img": "https://www.codeproject.com/KB/recipes/1087568/Smoothsort.gif"
+  },
+  {
+    "type":"cycle",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Cyclesort-cycle.svg/523px-Cyclesort-cycle.svg.png"
+  },
+  {
+    "type":"cycle",
+    "img":"https://media.geeksforgeeks.org/wp-content/uploads/20220908131838/Example2.png"
+  },  
+  {
+    "type":"cycle",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/a/a7/Cyclesort.png"
+  },
+  {
+    "type":"library",
+    "img":"https://d3i71xaburhd42.cloudfront.net/cee98df3cc6cd9ea0d849464725549ebc8bb208f/5-Figure13-1.png"
+  },
+  {
+    "type":"cube",
+    "img":"https://d3i71xaburhd42.cloudfront.net/79b59d7b9d684c01a0b902adc2c880d0fc63c52a/16-Figure10-1.png"
+  },
+  {
+    "type":"gnome",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/8/89/Visualization_of_Gnome_sort.gif"
+  },
+  {
+    "type":"gnome",
+    "img":"https://media.geeksforgeeks.org/wp-content/cdn-uploads/gnomesort.png"
+  },
+  {
+    "type":"intro",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  },
+  {
+    "type":"",
+    "img":""
+  }
+]

@@ -1,0 +1,307 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --selection-background: #000000;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+.App{
+
+  display: flex;
+}
+nav {
+  width: 18vw;
+  height: 100vh;
+  position: sticky;
+  left: 0;
+  border-right: 1px solid #000;
+  background-color: #fff;
+  z-index: 10;
+}
+nav > h2 {
+  height: 180px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 52px;
+  padding: 12px 20px;
+}
+
+nav > h2 > div {
+  color: white;
+  font-size: 15px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav ul {
+  height: calc(100vh - 180px);
+  overflow: scroll;
+}
+nav ul::-webkit-scrollbar, .bottom-container::-webkit-scrollbar {
+  display: none;
+}
+
+nav li {
+  height: 60px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  /* padding-left: 10px; */
+  border-bottom: 1px solid black;
+}
+
+nav li>div {
+  content: "";
+  /* position: absolute; */
+  left: 0;
+  height: 100%;
+  width: 15px;
+  margin-right: 10px;
+  background-color: #FF5170;
+}
+
+main {
+  width: 82vw;
+  /* margin-left: 250px; */
+  top: 0;
+  scroll-behavior: smooth;
+}
+
+.top-container, .bottom-container {
+  height: 50vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.top-container::-webkit-scrollbar, .bottom-container::-webkit-scrollbar {
+  display: none;
+}
+
+.color-bar {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  border-left: 1px solid #000;
+}
+.top-container .color-bar {
+  top: 0;
+}
+
+.bottom-container .color-bar {
+  bottom: 0;
+}
+
+.sort-unit {
+  height: 100%;
+  position: relative;
+  border-right: 1px solid #000;
+  margin-left: -1px;
+}
+
+.sort-unit > h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  line-height: 46px;
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.sort-unit h3 > div {
+  display: inline;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 34px;
+  margin-left: 10px;
+}
+
+.top-container h3 {
+  top: 10px;
+}
+
+.bottom-container h3 {
+  bottom: 10px;
+}
+
+.sort-img {
+  height: 100%;
+  display: flex;
+}
+.top-container .sort-img {
+  align-items: flex-end;
+}
+
+.bottom-container .sort-img {
+  align-items: start;
+}
+.sort-img-img{
+  width: 250px;
+  background-color: #fff;
+  transition: all 0.3s;
+  margin-bottom: -4px;
+  border: 1px solid #000;
+  border-right: none;
+}
+
+.top-container .sort-img img {
+  border-bottom: none;
+}
+
+.sort-img-wrapper {
+  width: 250px;
+  position: relative;
+  transition: all 0.3s;
+  /* z-index: 6; */
+  cursor: url("https://cdn.glitch.global/ba2d8659-c040-4cd9-ad3b-f4b90f3d8092/%F0%9F%98%AE_small.png?v=1680742849212") 5 5, progress;
+}
+
+.sort-img-img {
+  transition: all 1s;
+}
+/* 
+.sort-img-wrapper:hover ~ .sort-img-img, .sort-img-hover:hover ~ .sort-img-img, .sort-img-img:hover, .sort-img-hover img:hover ~ .sort-img-img {
+  left: 250px;
+  height: 50vh;
+  width: auto;
+  position: absolute;
+  transition: 0.2s;
+  z-index: 100;
+} */
+
+.sort-img-big {
+  display: none;
+  /* padding-left: 250px; */
+  right: 0;
+  height: 50vh;
+  width: auto;
+  transition: 0.2s;
+  z-index: -100;
+  position: fixed;
+}
+.top-container .sort-img-big {
+  top: 0;
+}
+
+.bottom-container .sort-img-big {
+  bottom: 0;
+}
+
+.sort-img-wrapper:hover .sort-img-big {
+  display: block;
+}
+
+.top-container .sort-img-hover:hover ~ .sort-img-img {
+  bottom: 0;
+}
+
+.sort-img img:hover {
+  cursor: url("https://cdn.glitch.global/ba2d8659-c040-4cd9-ad3b-f4b90f3d8092/%F0%9F%98%AE_small.png?v=1680742849212") 5 5, progress;
+}
+
+.sort-img-hover {
+  display: flex;
+  opacity: 0;
+  background-color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  transition: all 1s, opacity 1s;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.sort-img-hover img {
+  margin-right: 40px;
+}
+
+.sort-img-hover p {
+  color: white;
+  font-family: Pretendard, sans-serif;
+  line-height: 150%;
+  font-weight: 700;
+  white-space: pre-line;
+}
+
+p.algo-code {
+  font-family: 'Space Mono', monospace !important;
+  white-space: pre;
+  font-size: 10px;
+}
+
+.sort-img-hover:hover{
+  color: #fff;
+  height: 50vh;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.sort-img-hover img {
+  width: 100%;
+}
+
+.bottom-container .sort-img-hover {
+  align-items: flex-end;
+  top: 0;
+}
+
+.top-container .sort-img-hover {
+  align-items: flex-start;
+  bottom: 0;
+}
+
+
+
+.hover-img {
+	height: 50%;
+	position: absolute;
+	z-index: -1;
+	/* left: 0; */
+  transition: all 1s, transform 3s;
+	opacity: 0;
+  mix-blend-mode: multiply;
+}

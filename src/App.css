@@ -94,8 +94,8 @@ nav > h2 > button:hover {
 
 p.project-info::before {
   content: '';
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
   border-bottom: 15px solid white;
   position: absolute;
   top: -20px;
@@ -109,8 +109,8 @@ p.project-info {
   display: none;
   opacity: 0;
   color: black;
-  margin-top: 15px;
-  padding: 10px;
+  margin-top: 10px;
+  padding: 15px;
   font-size: 12px;
   line-height: 150%;
   font-family: 'Pretendard', sans-serif;
@@ -136,6 +136,9 @@ p.project-info a:hover{
 p.project-info button {
   position: absolute;
   right: 10px;
+  bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 nav ul {

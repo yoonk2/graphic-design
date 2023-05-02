@@ -20,6 +20,10 @@ time, mark, audio, video {
   text-decoration: none;
   color: black;
 }
+button {
+  background: none;
+  border: none;
+}
 
 * {
   box-sizing: border-box;
@@ -56,16 +60,82 @@ nav > h2 {
   font-style: italic;
   font-weight: 400;
   font-size: 36px;
-  line-height: 52px;
+  line-height: 47px;
   padding: 12px 20px;
+  position: relative;
 }
 
-nav > h2 > div {
+nav > h2 > button {
+  background: none;
+  border: none;
   color: white;
   font-size: 15px;
+  line-height: 17px;
   font-family: 'Pretendard', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
+  width: fit-content;
+  padding: 10px 0 30px;
   font-style: normal;
+  text-decoration: underline;
+  z-index: 10;
+  /* border-bottom: 1px solid white; */
+  cursor: pointer;
+}
+nav > h2 > button:focus ~ p.project-info {
+  transition-delay: 0s;
+  display: block;
+  opacity: 1;
+}
+
+nav > h2 > button:hover {
+  /* border-bottom: 1px solid transparent; */
+  text-decoration: none;
+}
+
+p.project-info::before {
+  content: '';
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 15px solid white;
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  margin-top: 10px;
+}
+
+p.project-info {
+  transition-delay: 1s;
+  transition: 0.3s;
+  display: none;
+  opacity: 0;
+  color: black;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 150%;
+  font-family: 'Pretendard', sans-serif;
+  position: absolute;
+  left: 30px;
+  top: 150px;
+  width: 300px;
+  background-color: white;
+  font-weight: 700;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  border: 1px solid black;
+  font-style: normal;
+}
+p.project-info a {
+  color: #555555;
+  text-decoration: underline;
+}
+p.project-info a:hover{
+  text-decoration: none;
+}
+
+p.project-info button {
+  position: absolute;
+  right: 10px;
 }
 
 nav ul {
@@ -86,6 +156,7 @@ nav li {
   align-items: center;
   /* padding-left: 10px; */
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
 
 nav li>div {
@@ -264,7 +335,8 @@ main {
   font-family: Pretendard, sans-serif;
   line-height: 150%;
   font-weight: 700;
-  white-space: pre-line;
+  word-break: keep-all;
+  white-space: pre-wrap;
 }
 
 p.algo-code {

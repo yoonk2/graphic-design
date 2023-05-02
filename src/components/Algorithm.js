@@ -4,13 +4,6 @@ import svg from "../assets/merge-comp.svg"
 import HoverInfo from "./HoverInfo"
 
 function Algorithm(props) {
-    
-    const hoverInfo = () => {
-        const i = props.index
-        console.log('hi')
-        
-    }
-
     const img = new Image()
     img.src = props.algo.src
 

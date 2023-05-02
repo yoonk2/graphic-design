@@ -48,17 +48,23 @@ const onWheel = (e) => {
     algoArray.push(item)
   })
 
+  const scrollToAlgo = (type) => {
+    console.log(type)
+    const element = document.getElementById(type);
+    element?.scrollIntoView()
+  }
+
 
   const arrayItems = algoArray.map(algo => {
-    const typeID = "#" + algo.type
-    return (<a href={typeID}><li key={algo.id} className={algo.id}><div style={{backgroundColor: algo.color}}></div>{algo.title}</li></a>)
+    return (<li onClick={scrollToAlgo(algo.type)} key={algo.id} className={algo.id}><div style={{backgroundColor: algo.color}}></div>{algo.title}</li>)
   }
   )
+  const algoRef = useRef([])
   
-  const topItems = algoArray.slice(0, algoArray.length/2).map((algo) => {
+  const topItems = algoArray.slice(0, algoArray.length/2).map((algo, index) => {
     let i = 0;
     return(
-  <div className="sort-unit" id={algo.type} >
+  <div className="sort-unit" id={algo.type} ref={el => (algoRef.current[index] = el)} >
       <div className="color-bar" style={{backgroundColor:algo.color}}></div>
       <h3>{algo.title}<div>{algo.kor_title}</div></h3>
       {algo.img!=""?(<img className="hover-img" ref={imgRef} src={algo.img}/>):null}
@@ -72,10 +78,10 @@ const onWheel = (e) => {
     )
     })
 
-    const bottomItems = algoArray.slice(algoArray.length/2).map((algo) => {
+    const bottomItems = algoArray.slice(algoArray.length/2).map((algo, index) => {
       let i = 0;
       return(
-      <div className="sort-unit" id={algo.type}>
+      <div className="sort-unit" id={algo.type} ref={el => (algoRef.current[index + algoArray.length/2] = el)}>
         <div className="color-bar" style={{backgroundColor:algo.color}}></div>
         <h3>{algo.title}<div>{algo.kor_title}</div></h3>
         {algo.img!=""?(<img className="hover-img" ref={imgRef} src={algo.img}/>):null}
@@ -121,7 +127,9 @@ const onWheel = (e) => {
         <h2>Sorting Algorithms<div>정렬 알고리즘</div></h2>
         
         <ul>
-          {arrayItems}
+          {algoArray.map((algo, i) => <li onClick={() => {
+            algoRef.current[i].scrollIntoView({behavior:"smooth"})
+          }} key={algo.id} className={algo.id}><div style={{backgroundColor: algo.color}}></div>{algo.title}</li>)}
         </ul>
       </nav>
       {/* <img ref={cursorImgRef} src={cursorImg} style={{position:"absolute", zIndex:"10", height:"100px"}}/> */}

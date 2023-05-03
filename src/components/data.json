@@ -64,10 +64,6 @@
     "img": "https://user-images.githubusercontent.com/78089013/176308368-bdf31895-fae2-49ef-b9ad-8845a7fcba7a.gif"
   },
   {
-    "type": "selection",
-    "img": "https://everythingcomputerscience.com/images/Selection_sort_animation.gif"
-  },
-  {
     "type": "heap",
     "img": "https://user-images.githubusercontent.com/78089013/176308418-ca1bdf07-9266-429f-a240-2b5484de6f51.gif"
   },
@@ -104,6 +100,10 @@
     "img": "https://www.codeproject.com/KB/recipes/1087568/BiDirectional_Bubble_Sort.gif"
   },
   {
+    "type": "bubble",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif"
+  },
+  {
     "type":"odd-even",
     "img":"https://upload.wikimedia.org/wikipedia/commons/1/1b/Odd_even_sort_animation.gif"
   },
@@ -130,6 +130,10 @@
   {
     "type": "selection",
     "img": "https://user-images.githubusercontent.com/78089013/176554628-3c754a53-aca4-46ff-a015-0b8a6dac2999.gif"
+  },
+  {
+    "type": "selection",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif"
   },
   {
     "type": "shell",
@@ -246,8 +250,8 @@
     "img":""
   },
   {
-    "type":"",
-    "img":""
+    "type":"tree",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Binary_tree_sort%282%29.png/300px-Binary_tree_sort%282%29.png"
   },
   {
     "type":"",

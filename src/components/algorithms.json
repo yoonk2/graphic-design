@@ -5,8 +5,8 @@
         "kor_title": "삽입 정렬",
         "img": "https://devicetests.com/wp-content/uploads/2022/10/image-431.png",
         "color": "",
-        "kor_desc" : "삽입 정렬(揷入整列, insertion sort)은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘이다.",
-        "code": "",
+        "kor_desc" : "삽입 정렬은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘이다.",
+        "code": "i ← 1\nwhile i < length(A)\n    j ← i\n    while j > 0 and A[j-1] > A[j]\n        swap A[j] and A[j-1]\n        j ← j - 1\n    end while\n    i ← i + 1\nend while",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/insertion.svg?v=1682953226484"
     },
     {
@@ -15,8 +15,8 @@
         "kor_title": "선택 정렬",
         "img": "https://cdn.elearningindustry.com/wp-content/uploads/2018/11/4-tips-to-select-the-right-course-management-system-for-your-training-company-1024x574.jpg",
         "color": "",
-        "kor_desc" : "선택 정렬(選擇整列, selection sort)은 제자리 정렬 알고리즘의 하나로, 다음과 같은 순서로 이루어진다. \n1. 주어진 리스트 중에 최소값을 찾는다.\n2. 그 값을 맨 앞에 위치한 값과 교체한다(패스(pass)).\n3. 맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체한다.\n비교하는 것이 상수 시간에 이루어진다는 가정 아래, n개의 주어진 리스트를 이와 같은 방법으로 정렬하는 데에는 Θ(n2) 만큼의 시간이 걸린다. 선택 정렬은 알고리즘이 단순하며 사용할 수 있는 메모리가 제한적인 경우에 사용시 성능 상의 이점이 있다.",
-        "code": "",
+        "kor_desc" : "선택 정렬은 제자리 정렬 알고리즘의 하나로, 다음과 같은 순서로 이루어진다. \n1. 주어진 리스트 중에 최소값을 찾는다.\n2. 그 값을 맨 앞에 위치한 값과 교체한다(패스(pass)).\n3. 맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체한다.\n비교하는 것이 상수 시간에 이루어진다는 가정 아래, n개의 주어진 리스트를 이와 같은 방법으로 정렬하는 데에는 Θ(n2) 만큼의 시간이 걸린다. 선택 정렬은 알고리즘이 단순하며 사용할 수 있는 메모리가 제한적인 경우에 사용시 성능 상의 이점이 있다.",
+        "code": "int i,j;\nint aLength;\n\nfor (i = 0; i < aLength-1; i++)\n{\n    int jMin = i;\n    for (j = i+1; j < aLength; j++)\n    {\n        if (a[j] < a[jMin])\n        {\n            jMin = j;\n        }\n    }\n\n    if (jMin != i) \n    {\n        swap(a[i], a[jMin]);\n    }\n}",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/selection.svg?v=1682953222064"
     },
     {
@@ -26,7 +26,7 @@
         "img": "https://www.coindesk.com/resizer/gcPTe_VVC1uQrfYllRcQQOckktY=/arc-photo-coindesk/arc2-prod/public/WZEEOG7NONGIXHTI2N6EHHLAIY.jpg",
         "color": "",
         "kor_desc" : "합병 정렬 또는 병합 정렬(영어: merge sort 머지 소트)은 O(n log n) 비교 기반 정렬 알고리즘이다. 일반적인 방법으로 구현했을 때 이 정렬은 안정 정렬에 속하며, 분할 정복 알고리즘의 하나이다. 존 폰 노이만이 1945년에 개발했다. 상향식 합병 정렬에 대한 자세한 설명과 분석은 1948년 초 헤르만 골드스타인과 폰 노이만의 보고서에 등장하였다.",
-        "code": "",
+        "code": "void TopDownMergeSort(A[], B[], n)\n{\n    CopyArray(A, 0, n, B);           \n    TopDownSplitMerge(B, 0, n, A);   \n}\n\nvoid TopDownSplitMerge(B[], iBegin, iEnd, A[])\n{\n    if (iEnd - iBegin <= 1)                   \n        return;                               \n    iMiddle = (iEnd + iBegin) / 2;            \n    TopDownSplitMerge(A, iBegin,  iMiddle, B);\n    TopDownSplitMerge(A, iMiddle,    iEnd, B);\n    TopDownMerge(B, iBegin, iMiddle, iEnd, A);\n}\n\nvoid TopDownMerge(A[], iBegin, iMiddle, iEnd, B[])\n{\n    i = iBegin, j = iMiddle;\n \n    for (k = iBegin; k < iEnd; k++) {\n        if (i < iMiddle && (j >= iEnd || A[i] <= A[j])) {\n            B[k] = A[i];\n            i = i + 1;\n        } else {\n            B[k] = A[j];\n            j = j + 1;\n        }\n    }\n}\n\nvoid CopyArray(A[], iBegin, iEnd, B[])\n{\n    for (k = iBegin; k < iEnd; k++)\n        B[k] = A[k];\n}",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/merge.svg?v=1682953234485"
     },
     {
@@ -35,8 +35,8 @@
         "kor_title": "버블 정렬",
         "img": "https://media.istockphoto.com/id/1369351889/vector/transparent-water-realistic-glass-bubbles-bubbles-jpg-vector-jpg.jpg?s=612x612&w=0&k=20&c=U7ygHjp3bRW9vbjMZYFwCS1trvxMBUYrYLQIjfAvygQ=",
         "color": "",
-        "kor_desc" : "",
-        "code": "",
+        "kor_desc" : "버블 정렬 또는 거품 정렬은 정렬 알고리즘 중 하나이다. 시간 복잡도가 상당히 느리지만, 코드가 단순하기 때문에 자주 사용된다. 원소의 이동이 거품이 수면으로 올라오는 듯한 모습을 보이기 때문에 지어진 이름이다. 이를 양방향으로 번갈아 수행하면 칵테일 정렬이 된다.",
+        "code": "int* bubble_sort(int arr[], int n) {\n    int i, j, temp;\n    for (i=n-1; i>0; i--) {\n        for (j=0; j<i; j++) {\n            if (arr[j] > arr[j+1]) {\n                temp = arr[j];\n                arr[j] = arr[j+1];\n                arr[j+1] = temp;\n            }\n        }\n    }\n    return arr;\n}\nint main() {\n    int arr[MAX] = { 2, 6, 4, 8, 10, 12, 89, 68, 45, 37 };\n    int* arr_new = bubble_sort(arr, MAX);\n    for (int i = 0; i < MAX; i++) {\n        printf('%d\n', *(arr_new+i));\n    }\n    return 0;\n}",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/bubble.svg?v=1682953213913"
     },
     {
@@ -45,8 +45,8 @@
         "kor_title": "팀 정렬",
         "img": "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%A2%D0%B8%D0%BC_%D0%9A%D1%83%D0%BA_%2802-09-2021%29.jpg",
         "color": "",
-        "kor_desc" : "",
-        "code": "",
+        "kor_desc" : "팀소트(Timsort)는 수많은 종류의 실세계 데이터에 잘 수행하도록 설계된 하이브리드형 안정 정렬 알고리즘의 하나이다. 합병 정렬과 삽입 정렬이 기원이다. 2002년 파이썬 프로그래밍에 사용하기 위해 팀 피터스가 구현했다.",
+        "code": "def timSort(arr):\n    n = len(arr)\n    minRun = calcMinRun(n)\n     for start in range(0, n, minRun):\n        end = min(start + minRun - 1, n - 1)\n        insertionSort(arr, start, end)\n     size = minRun\n    while size < n:\n         for left in range(0, n, 2 * size):\n             mid = min(n - 1, left + size - 1)\n            right = min((left + 2 * size - 1), (n - 1))\n             if mid < right:\n                merge(arr, left, mid, right)\n         size = 2 * size",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/tim.svg?v=1682953224143"
     },
     {
@@ -63,17 +63,17 @@
         "type": "radix",
         "title": "Radix Sort",
         "kor_title": "기수 정렬",
-        "img": "",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SEACComputer_038.jpg/440px-SEACComputer_038.jpg",
         "color": "",
-        "kor_desc" : "",
-        "code": "",
+        "kor_desc" : "기수 정렬(radix sort)은 기수 별로 비교 없이 수행하는 정렬 알고리즘이다. 기수로는 정수, 낱말, 천공카드 등 다양한 자료를 사용할 수 있으나 크기가 유한하고 사전순으로 정렬할 수 있어야 한다. 버킷 정렬의 일종으로 취급되기도 한다.",
+        "code": "void rxSort(int *data, int size, int p, int k) {\n    int *counts,\n        *temp;\n    int index, pval, i, j, n;\n    if ( (counts = (int*) malloc(k * sizeof(int))) == NULL )\n      return;\n    if ( (temp = (int*) malloc(size * sizeof(int))) == NULL )\n      return;\n    for (n=0; n<p; n++) {\n      for (i=0; i<k; i++)\n        counts[i] = 0;\n      pval = (int)pow((double)k, (double)n);\n      for (j=0; j<size; j++) {\n        // 253이라는 숫자라면\n        // n:0 => 3,  1 => 5, 2 => 2\n        index = (int)(data[j] / pval) % k;\n        counts[index] = counts[index] + 1;\n      }\n      for (i=1; i<k; i++) {\n        counts[i] = counts[i] + counts[i-1];\n      }\n      for (j=size-1; j>=0; j--) {\n        index = (int)(data[j] / pval) % k;\n        temp[counts[index] -1] = data[j];\n        counts[index] = counts[index] - 1;\n      }\n      memcpy(data, temp, size * sizeof(int));\n    }\n    free(counts);\n    free(temp);\n  }",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/radix.svg?v=1682953183213"
     },
     {
         "type": "library",
         "title": "Library Sort",
         "kor_title": "라이브러리 정렬",
-        "img": "",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Statsbiblioteket_l%C3%A6sesalen-2.jpg",
         "color": "",
         "kor_desc": "라이브러리 정렬(library sort, 라이브러리 소트, gapped insertion sort)은 삽입 정렬을 사용하지만 차후의 삽입 속도를 빠르게 하기 위해 배열에 간격을 두는 정렬 알고리즘의 하나이다. 이 알고리즘은 2004년 마이클 A. 벤더, Martin Farach-Colton, 미구엘 모스테이로에 의해 제안되었으며 2006년 출판되었다.",
         "code": "proc rebalance(A, begin, end)\nr ← end\nw ← end * 2\nwhile r >= begin\nA[w+1] ← gap\nA[w] ← A[r]\nr ← r - 1\nw ← w - 2",
@@ -85,7 +85,7 @@
         "kor_title": "큐브 정렬",
         "img": "https://www.rubiksplace.com/images/best-speedcubes/2022/gan13-maglev-speedcube.png",
         "color": "",
-        "kor_desc": "",
+        "kor_desc": "큐브소트는 정렬해야 할 키(key)들을 이용하여 자기 균형을 맞춘 다차원 배열을 만들어 나가는 병렬 정렬 알고리즘이다. 각 축의 길이가 비슷하여 이 구조물은 큐브와 비슷한 모양을 가진다. 각 키가 삽입될 때마다 큐브는 빠르게 배열로 변환될 수 있다.",
         "code": "",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/cube.svg?v=1682953219217"
     },
@@ -93,7 +93,7 @@
         "type": "smooth",
         "title": "Smoothsort",
         "kor_title": "부드러운 정렬",
-        "img": "",
+        "img": "https://image.homeplus.kr/td/6479bd69-c92f-46c1-b425-c6218bc7aa2a",
         "color": "",
         "kor_desc": "Dijkstra가 제안한 비교 기반 정렬 알고리즘입니다. Smooth sort는 힙 정렬(heap sort) 알고리즘을 기반으로 하지만, 힙을 더 세분화하여 더욱 효율적인 정렬을 가능하게 한다. Smooth sort는 일반적인 힙 정렬 알고리즘과 달리, 힙의 높이(height)를 점진적으로 증가시키며 정렬한다. 이를 통해 최악의 경우에도 O(n log n)의 시간 복잡도를 보장하면서, 평균적으로 O(n log n)보다 빠른 실행 시간을 보인다.",
         "code": "",
@@ -105,18 +105,18 @@
         "kor_title": "난쟁이 정렬",
         "img": "",
         "color": "",
-        "kor_desc": "",
-        "code": "",
+        "kor_desc": "난쟁이 정렬, 그놈 정렬(Gnome sort), 스투피드 정렬(stupid sort)은 루프 안의 루프를 사용하지 않는 삽입 정렬 정렬 알고리즘의 일종이다. 난쟁이 정렬은 이란의 컴퓨터 과학자 하미드 사바지-아자드(Hamid Sarbazi-Azad)에 의해 2000년 처음 제안되었다",
+        "code": "procedure gnomeSort(a[]):\n    pos := 0\n    while pos < length(a):\n        if (pos == 0 or a[pos] >= a[pos-1]):\n            pos := pos + 1\n        else:\n            swap a[pos] and a[pos-1]\n            pos := pos - 1",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/gnome.svg?v=1682953209512"
     },
     {
         "type": "odd-even",
         "title": "Odd-Even Sort",
         "kor_title": "홀짝 정렬",
-        "img": "",
+        "img": "https://newsimg.hankookilbo.com/cms/articlerelease/2021/07/14/9d52a4dc-d9cb-422c-a4a6-b8090a51e451.jpg",
         "color": "",
-        "kor_desc": "",
-        "code": "",
+        "kor_desc": "홀짝 정렬(odd–even sort 또는 odd–even transposition sort) 또는 브릭 정렬(brick sort), 패리티 정렬(parity sort)은 상대적으로 단순한 정렬 알고리즘이다. 로컬 상호 연결에 병렬 프로세서를 사용하기 위해 처음 개발되었다",
+        "code": "function oddEvenSort(list) {\n    function swap(list, i, j) {\n      var temp = list[i];\n      list[i] = list[j];\n      list[j] = temp;\n    }\n  \n    var sorted = false;\n    while (!sorted) {\n      sorted = true;\n      for (var i = 1; i < list.length - 1; i += 2) {\n        if (list[i] > list[i + 1]) {\n          swap(list, i, i + 1);\n          sorted = false;\n        }\n      }\n      for (var i = 0; i < list.length - 1; i += 2) {\n        if (list[i] > list[i + 1]) {\n          swap(list, i, i + 1);\n          sorted = false;\n        }\n      }\n    }\n  }",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/odd-even.svg?v=1682953211665"
     },
     {
@@ -125,26 +125,17 @@
         "kor_title": "트리 정렬",
         "img": "https://img.freepik.com/free-photo/single-green-tree-on-clear-sky_181624-46695.jpg?w=2000",
         "color": "",
-        "kor_desc": "",
-        "code": "",
+        "kor_desc": "트리 정렬(Tree Sort)은 정렬할 요소들로부터 이진 탐색 트리(Binary Search Tree)를 만들고, 그 트리를 (중위 순회) 탐색하여 요소들이 정렬된 순서로 출력되도록 하는 정렬 알고리즘이다.",
+        "code": "STRUCTURE BinaryTree\n    BinaryTree:LeftSubTree\n    Object:Node\n    BinaryTree:RightSubTree\n\nPROCEDURE Insert(BinaryTree:searchTree, Object:item)\n    IF searchTree.Node IS NULL THEN\n        SET searchTree.Node TO item\n    ELSE\n        IF item IS LESS THAN searchTree.Node THEN\n            Insert(searchTree.LeftSubTree, item)\n        ELSE\n            Insert(searchTree.RightSubTree, item)\n\nPROCEDURE InOrder(BinaryTree:searchTree)\n    IF searchTree.Node IS NULL THEN\n        EXIT PROCEDURE\n    ELSE\n        InOrder(searchTree.LeftSubTree)\n        EMIT searchTree.Node\n        InOrder(searchTree.RightSubTree)\n\nPROCEDURE TreeSort(Collection:items)\n    BinaryTree:searchTree\n   \n    FOR EACH individualItem IN items\n        Insert(searchTree, individualItem)\n   \n    InOrder(searchTree)",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/tree.svg?v=1682953190667"
-    },{
-        "type": "block",
-        "title": "Block Sort",
-        "kor_title": "블록 정렬",
-        "img": "",
-        "color": "",
-        "kor_desc": "",
-        "code": "",
-        "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/block.svg?v=1682953228953"
     },{
         "type": "intro",
         "title": "Introsort",
-        "kor_title": "",
-        "img": "",
+        "kor_title": "인트로 정렬",
+        "img": "https://media0.giphy.com/media/efekGoJMGlbpolOC1F/giphy.gif?cid=ecf05e475sjjfs1zd6pefglmqpha15k7nwuhd02iw5c2h3eg&ep=v1_gifs_search&rid=giphy.gif&ct=g",
         "color": "",
-        "kor_desc": "",
-        "code": "",
+        "kor_desc": "인트로 정렬(introsort)은 평균적으로 빠른 성능을 내면서 최악의 조건에서도 점진적으로 최적화된 성능을 제공하는 하이브리드 정렬 알고리즘이다. 퀵 정렬로 시작한 다음 재귀 깊이가 정렬 대상 요소의 수의 레벨(로그)을 초과할 때 힙 정렬로 전환하며 요소들의 수가 특정 임계치 미만일 때 삽입 정렬로 전환한다.",
+        "code": "procedure introsort(A, maxdepth):\n    n ← length(A)\n    if n < 16:\n        insertionsort(A)\n    else if maxdepth = 0:\n        heapsort(A)\n    else:\n        p ← partition(A)  // assume this function does pivot selection, p is the final position of the pivot\n        introsort(A[1:p-1], maxdepth - 1)\n        introsort(A[p+1:n], maxdepth - 1)",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/intro.svg?v=1682953237187"
     }, {
         "type": "quick",
@@ -167,10 +158,10 @@
     },{
         "type": "cycle",
         "title": "Cycle Sort",
-        "kor_title": "",
-        "img": "",
+        "kor_title": "사이클 정렬",
+        "img": "https://mblogthumb-phinf.pstatic.net/20160625_146/oyy0104_14668396861283Qd4v_JPEG/21.jpg?type=w2",
         "color": "",
-        "kor_desc": "",
+        "kor_desc": "사이클 정렬(Cycle Sort)은 제자리 정렬(in-place), 불안정 정렬(unstable) 알고리즘이다. 원래의 배열에 쓰기(write) 총 횟수 면에서 이론적으로 최적이며, 다른 제자리 정렬 알고리즘과는 달리 이러한 특징을 가진 비교 정렬(comparison sort) 알고리즘이다. 이는 정렬할 순열(permutation)을 주기(cycle)들로 분해할 수 있으며, 이 주기들을 개별적으로 회전시켜서 정렬된 결과를 얻을 수 있다는 개념에 기반한다.",
         "code": "void cycle_sort(type_array *Array, int array_size)\n    {\n        for (int cycle_start = 0; cycle_start < array_size - 1; cycle_start++)\n        {\n            type_array item = Array[cycle_start];\n    \n            int pos = cycle_start;\n            for (int i = cycle_start + 1; i < array_size; i++)\n                if (Array[i] < item)\n                    pos += 1;\n            if (pos == cycle_start)\n                continue;\n            while (item == Array[pos])\n                pos += 1;\n    \n            swap(Array[pos], item);\n    \n            while (pos != cycle_start)\n            {\n                pos = cycle_start;\n                for (int i = cycle_start + 1; i < array_size; i++)\n                    if (Array[i] < item)\n                        pos += 1;\n                while (item == Array[pos])\n                    pos += 1;\n    \n                swap(Array[pos], item);\n            }\n        }\n    }",
         "complexity":"https://cdn.glitch.global/8c1d8dba-ce84-4980-875f-7e5986b8c634/cycle.svg?v=1682953193081"
     },

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/graphic-design/static/css/main.0c103f42.css",
-    "main.js": "/graphic-design/static/js/main.d032652f.js",
+    "main.js": "/graphic-design/static/js/main.2e092280.js",
     "static/js/787.28cb0dcd.chunk.js": "/graphic-design/static/js/787.28cb0dcd.chunk.js",
     "static/media/intro.svg": "/graphic-design/static/media/intro.5bda6ef2a83c32aaaae9.svg",
     "static/media/merge.svg": "/graphic-design/static/media/merge.9de50a0c1dd292d63f45.svg",
@@ -14,7 +14,6 @@
     "static/media/shell.svg": "/graphic-design/static/media/shell.729a23e89bb1053cc19f.svg",
     "static/media/cube.svg": "/graphic-design/static/media/cube.59041f9f1993a71d798d.svg",
     "static/media/block.svg": "/graphic-design/static/media/block.8379cab63a0447647743.svg",
-    "static/media/merge-comp.svg": "/graphic-design/static/media/merge-comp.03e869c89745e58fd44e6d91b4214ba4.svg",
     "static/media/comb.svg": "/graphic-design/static/media/comb.eb0ff766b4938b5ea57e.svg",
     "static/media/radix.svg": "/graphic-design/static/media/radix.d6336c298dfdf9f3c551.svg",
     "static/media/cycle.svg": "/graphic-design/static/media/cycle.927bfa7529c0a9bffb08.svg",
@@ -29,11 +28,11 @@
     "static/media/logo.svg": "/graphic-design/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/graphic-design/index.html",
     "main.0c103f42.css.map": "/graphic-design/static/css/main.0c103f42.css.map",
-    "main.d032652f.js.map": "/graphic-design/static/js/main.d032652f.js.map",
+    "main.2e092280.js.map": "/graphic-design/static/js/main.2e092280.js.map",
     "787.28cb0dcd.chunk.js.map": "/graphic-design/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0c103f42.css",
-    "static/js/main.d032652f.js"
+    "static/js/main.2e092280.js"
   ]
 }
